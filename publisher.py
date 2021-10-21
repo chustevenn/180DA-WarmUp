@@ -26,7 +26,7 @@ client.loop_start()
 
 words = ['yes', 'no', 'maybe', 'so', 'sad', 'life', 'unfortunate', 'words']
 for word in words:
-    client.publish('ece180d/test', float(np.random.random(1)), qos=1)
+    client.publish('ece180d/test', word, qos=1)
 
 client.loop_stop()
 client.disconnect()
